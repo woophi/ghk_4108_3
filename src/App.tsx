@@ -63,6 +63,7 @@ export const App = () => {
           block
           view="primary"
           onClick={() => {
+            window.gtag('event', 'next_4108_var3');
             setShowBs(true);
           }}
         >
@@ -70,7 +71,13 @@ export const App = () => {
         </ButtonMobile>
         <Typography.Text view="primary-medium" color="secondary">
           Продолжая, вы соглашаетесь с{' '}
-          <span onClick={() => setShowBsRules(true)} style={{ textDecoration: 'underline', color: '#000' }}>
+          <span
+            onClick={() => {
+              window.gtag('event', 'rules_4108_var3');
+              setShowBsRules(true);
+            }}
+            style={{ textDecoration: 'underline', color: '#000' }}
+          >
             правилами использования
           </span>
           .
@@ -146,7 +153,7 @@ export const App = () => {
         }}
         contentClassName={appSt.btmContent}
         actionButton={
-          <ButtonMobile block view="primary" href={chatBotLink}>
+          <ButtonMobile block view="primary" href={chatBotLink} onClick={() => window.gtag('event', 'agree_4108_var3')}>
             Понятно, продолжить
           </ButtonMobile>
         }
