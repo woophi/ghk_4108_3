@@ -1,6 +1,5 @@
 import { BottomSheet } from '@alfalab/core-components/bottom-sheet';
 import { ButtonMobile } from '@alfalab/core-components/button/mobile';
-import { Gap } from '@alfalab/core-components/gap';
 import { List } from '@alfalab/core-components/list';
 import { Typography } from '@alfalab/core-components/typography';
 import { useState } from 'react';
@@ -56,7 +55,7 @@ export const App = () => {
         </div>
       </div>
 
-      <Gap size={96} />
+      <div style={{ height: '150px' }} />
 
       <div className={appSt.bottomBtn}>
         <ButtonMobile
